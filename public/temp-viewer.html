@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Viewer</title>
+    <style>
+        body { font-family: sans-serif; }
+        .grid { display: flex; flex-wrap: wrap; gap: 20px; }
+        .card { border: 1px solid #ccc; padding: 10px; width: 300px; }
+        .card img { max-width: 100%; height: auto; }
+        .title { font-size: 12px; margin-top: 5px; word-break: break-all; }
+    </style>
+</head>
+<body>
+    <h1>Images to Categorize</h1>
+    <div class="grid" id="grid"></div>
+    <script>
+        const images = [
+            "WhatsApp Image 2026-05-09 at 2.17.21 PM (1).jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.21 PM (2).jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.21 PM.jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.22 PM (1).jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.22 PM.jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.23 PM.jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.24 PM (1).jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.24 PM (2).jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.24 PM.jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.25 PM (1).jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.25 PM.jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.26 PM.jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.27 PM (1).jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.27 PM.jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.28 PM (1).jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.28 PM (2).jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.28 PM.jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.29 PM (1).jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.29 PM (2).jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.29 PM.jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.30 PM.jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.31 PM.jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.32 PM (1).jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.32 PM (2).jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.32 PM.jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.33 PM (1).jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.33 PM (2).jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.33 PM (3).jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.33 PM.jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.34 PM (1).jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.34 PM (2).jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.34 PM (3).jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.34 PM (4).jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.34 PM.jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.35 PM (1).jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.35 PM (2).jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.35 PM (3).jpeg",
+            "WhatsApp Image 2026-05-09 at 2.17.35 PM.jpeg",
+            "wmremove-transformed.png"
+        ];
+        
+        const grid = document.getElementById('grid');
+        images.forEach(img => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `<img src="/images/${encodeURIComponent(img)}" />
+                              <div class="title">${img}</div>`;
+            grid.appendChild(card);
+        });
+    </script>
+</body>
+</html>
