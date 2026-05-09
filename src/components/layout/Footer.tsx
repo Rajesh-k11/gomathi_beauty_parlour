@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Instagram } from "lucide-react";
 import { STUDIO_CONFIG, WHATSAPP_BOOKING_URL } from "@/lib/utils";
 
 const Footer: React.FC = () => {
@@ -24,7 +24,6 @@ const Footer: React.FC = () => {
               Where every bride&apos;s beauty is celebrated with artistry, care, and grace.
             </p>
             {/* Social */}
-            <div className="flex gap-3 mt-6">
               <a
                 href={STUDIO_CONFIG.instagram}
                 target="_blank"
@@ -33,15 +32,6 @@ const Footer: React.FC = () => {
                 aria-label="Instagram"
               >
                 <Instagram className="w-4 h-4" />
-              </a>
-              <a
-                href={STUDIO_CONFIG.facebook}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 border border-gold/30 flex items-center justify-center hover:border-gold hover:text-gold text-cream/60 transition-all"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-4 h-4" />
               </a>
             </div>
           </div>
