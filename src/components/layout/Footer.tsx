@@ -24,6 +24,7 @@ const Footer: React.FC = () => {
               Where every bride&apos;s beauty is celebrated with artistry, care, and grace.
             </p>
             {/* Social */}
+            <div className="flex gap-3 mt-6">
               <a
                 href={STUDIO_CONFIG.instagram}
                 target="_blank"
